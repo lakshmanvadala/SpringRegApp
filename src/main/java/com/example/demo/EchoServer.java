@@ -31,9 +31,5 @@ public class EchoServer {
         return "registrationSuccess"; // This will display a success page
     }
 
-    // Existing echo endpoint
-    @GetMapping("/echo/{name}")
-    public String echo(@PathVariable("name") String name){
-        return "Hello " + name;
-    }
+   
 }
