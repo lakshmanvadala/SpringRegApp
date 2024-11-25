@@ -10,11 +10,10 @@ import org.springframework.web.bind.annotation.RestController;
 @Controller
 public class EchoServer {
     
-    // Display the registration form
-    @GetMapping("/register")
-    public String showRegistrationForm() {
-        return "registration"; // This will look for registration.html in the templates folder
-    }
+    @RequestMapping(value = "/register", method = RequestMethod.GET)
+public String showRegistrationForm() {
+    return "registration";
+}
 
     // Handle form submission
     @PostMapping("/register")
